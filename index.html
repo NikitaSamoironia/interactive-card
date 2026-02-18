@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Интерактивная открытка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #764ba2;
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px 0;
+            min-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🎉 Привет!</h1>
+        <p>Нажми на кнопки ниже:</p>
+        <div class="message" id="message">Выбери вариант...</div>
+        <button onclick="showMessage('С Днем рождения! 🎂')">Поздравление 1</button>
+        <button onclick="showMessage('Удачи во всем! ✨')">Поздравление 2</button>
+        <button onclick="showMessage('Ты лучший! 🌟')">Поздравление 3</button>
+    </div>
+
+    <script>
+        function showMessage(text) {
+            document.getElementById('message').textContent = text;
+        }
+    </script>
+</body>
+</html>
